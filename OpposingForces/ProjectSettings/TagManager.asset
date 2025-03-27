@@ -9,6 +9,7 @@ TagManager:
   - Near
   - Environment
   - Player Projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX

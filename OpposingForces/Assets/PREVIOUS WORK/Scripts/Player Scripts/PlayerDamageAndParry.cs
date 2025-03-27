@@ -56,8 +56,6 @@ public class PlayerDamageAndParry : MonoBehaviour
         health = maxHealth;
 
         tempSpriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
-        parryShield = gameObject.GetComponentInChildren<ParryShieldController>().gameObject;
-        parryShield.SetActive(false);
     }
 
 
