@@ -881,7 +881,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1642074242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_action":{"actions":[{"characterAcceleration":{},"target":{"_name":"player","_targetVariableID":"13252e38-5320-4a4a-aff5-5365cd75b1b8"},"steeringAcceleration":4.0,"$type":"NodeCanvas.Tasks.Actions.ApproachAT"},{"wanderSampleFrequency":2.0,"wanderDirectionChangeFrequency":2.0,"acceleration":{},"accelerationStrength":4.0,"$type":"NodeCanvas.Tasks.Actions.WanderAT"}],"$type":"NodeCanvas.Framework.ActionList"},"_position":{"x":457.0,"y":298.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_action":{"actions":[{"characterAcceleration":{},"target":{"_name":"player","_targetVariableID":"13252e38-5320-4a4a-aff5-5365cd75b1b8"},"steeringAcceleration":4.0,"$type":"NodeCanvas.Tasks.Actions.ApproachAT"},{"wanderSampleFrequency":2.0,"wanderDirectionChangeFrequency":2.0,"acceleration":{},"accelerationStrength":4.0,"$type":"NodeCanvas.Tasks.Actions.WanderAT"}],"$type":"NodeCanvas.Framework.ActionList"},"_position":{"x":458.0,"y":298.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.31
