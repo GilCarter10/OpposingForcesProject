@@ -27,13 +27,10 @@ public class PlayerBullet : MonoBehaviour
         {
             TakeDamage collidedEnemy = collision.gameObject.GetComponent<TakeDamage>();
             collidedEnemy.TakeHit(damage);
+            Destroy(gameObject);
         }
 
-        if(collision.gameObject.GetComponent<ReflectBullet>() != null && collision.gameObject.GetComponent<ReflectBullet>().reflecting) 
-        {
-            bulletRB.velocity = (transform.position - collision.gameObject.transform.position) * speed;
-        }
-        else Destroy(gameObject);
+        //else ;
 
         if(collision.gameObject.tag == "Bullet Collider (No Spark FX)")
         {

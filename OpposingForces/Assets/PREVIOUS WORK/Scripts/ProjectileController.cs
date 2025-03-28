@@ -50,15 +50,6 @@ public class ProjectileController : MonoBehaviour
             runDirection = -transform.right;
         }
 
-        if(isParriable)
-        {
-            if(!PlayerDamageAndParry.parryUnlocked)
-            {
-                isParriable = false;
-                GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
-            }
-        }
-
     }
 
     void Update()

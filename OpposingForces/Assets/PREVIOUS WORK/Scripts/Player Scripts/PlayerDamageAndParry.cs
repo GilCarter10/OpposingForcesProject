@@ -11,8 +11,6 @@ public class PlayerDamageAndParry : MonoBehaviour
      * Player health
      * Player taking damage
      * Player knockback when taking damage
-     * Unlocking the parry ability
-     * Parry parameters
      
      */
 
@@ -20,20 +18,6 @@ public class PlayerDamageAndParry : MonoBehaviour
     public int health;
 
     public Slider healthSlider;
-
-    [SerializeField] bool unlockParry;
-    public static bool parryUnlocked;
-
-    public float parryLength; //how long the parry lasts
-    private float parryTimer; //how long the parry has been going on for
-    public static bool isParrying = false; //
-    public static ParryState canParry = ParryState.No; //can the bullet be parried
-    public enum ParryState
-    {
-        No, //there's no bullet to parry
-        Able, //the bullet is inside the player and can still be parried
-        Missed, //the bullet is inside the player but it's too late to parry (determined by "parryWindowAfter")
-    }
 
     SpriteRenderer tempSpriteRenderer; //used rn for changing player sprite colour to illustrate different states
 
@@ -45,14 +29,10 @@ public class PlayerDamageAndParry : MonoBehaviour
     public float invincibleTime; 
     bool isInvincible = false;
 
-    private GameObject parryShield;
-    
-
+    public GameObject gameOverScreen;
 
     void Start()
     {
-        parryUnlocked = unlockParry;
-
         health = maxHealth;
 
         tempSpriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
@@ -82,49 +62,17 @@ public class PlayerDamageAndParry : MonoBehaviour
 
         if (health <= 0)
         {
-            Transform respawnTransform = GetComponentInParent<Transform>();
-            transform.position = respawnTransform.position;
-            health = maxHealth;
-            Debug.Log("respawn: " + respawnTransform);
+            gameObject.SetActive(false);
+            gameOverScreen.SetActive(true);
         }
 
-        if (parryUnlocked)
-        {
-
-            if (isParrying) //during parrying animation
-            {
-                parryTimer += Time.deltaTime;
-                
-                if (parryTimer >= parryLength) //when animation is done
-                {
-                    isParrying = false; //end animation
-                    parryShield.SetActive(false);
-                    parryTimer = 0; //reset timer
-                }
-                tempSpriteRenderer.color = Color.yellow; //placeholder for parrying animation
-            }
-            
-            else
-            {
-                if (!isInvincible)
-                {
-                    tempSpriteRenderer.color = Color.white; //if a bullet isn't touching the player and the player isn't parrying
-
-                }
-                else tempSpriteRenderer.color = Color.red;
-            }
-        }
+       
         
     }
 
     private void OnParry()
     {
-        if (parryUnlocked && !isParrying)
-        {
-            //begin parry animation
-            isParrying = true;
-            parryShield.SetActive(true);
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -137,10 +85,7 @@ public class PlayerDamageAndParry : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<ProjectileController>() != null && collision.gameObject.GetComponent<ProjectileController>().isParriable)
-        {
-            canParry = ParryState.No; //when the bullet ex
-        }
+
     }
 
 
@@ -164,7 +109,7 @@ public class PlayerDamageAndParry : MonoBehaviour
             PlayerMoveAndShoot.playerRB.velocity += pushbackDirection.normalized * knockbackForce; //applying force
 
         
-            canParry = ParryState.No;
+
             health--;
         }
     }
