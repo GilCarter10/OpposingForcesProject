@@ -6,7 +6,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class RetreatAT : ActionTask {
 		public BBParameter<Vector3> characterAcceleration;
-		public BBParameter<Vector3> target;
+		public BBParameter<Vector3> defaultPosition;
 		public float steeringAcceleration;
 
 		public Animator animator;
@@ -22,17 +22,18 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 			//trigger animation
-			animator.SetTrigger("hurt");
+			animator.SetBool("hurt", true);
 
 			//retreat movement
-			Vector3 direction = target.value - agent.transform.position;
+			Vector3 direction = defaultPosition.value - agent.transform.position;
 			direction = new Vector3(direction.x, direction.y, 0);
 			characterAcceleration.value += direction.normalized * steeringAcceleration * Time.deltaTime;
 			if (direction.magnitude < 0.5)
 			{
 				//arrived
 				animator.SetBool("vampire", false);
-				EndAction(false);
+                animator.SetBool("hurt", false);
+                EndAction(false);
 			}
 			EndAction(true);
 

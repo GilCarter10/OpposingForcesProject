@@ -6,7 +6,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class ChaseAT : ActionTask {
 		public BBParameter<Vector3> characterAcceleration;
-		public BBParameter<Vector3> target;
+		public BBParameter<Vector3> player;
 		public float steeringAcceleration;
 
 		public Animator animator;
@@ -25,7 +25,7 @@ namespace NodeCanvas.Tasks.Actions {
 			animator.SetBool("vampire", true);
 
 			//movement
-			Vector3 direction = target.value - agent.transform.position;
+			Vector3 direction = player.value - agent.transform.position;
 			direction = new Vector3(direction.x, direction.y, 0);
 			characterAcceleration.value += direction.normalized * steeringAcceleration * Time.deltaTime;
 			EndAction(true);

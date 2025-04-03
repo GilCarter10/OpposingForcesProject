@@ -26,12 +26,12 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			velocity.value += acceleration.value;
-			float groundSpeed = Mathf.Sqrt(velocity.value.x * velocity.value.x + velocity.value.y * velocity.value.y);
-			if (maxSpeed.value < groundSpeed)
+			float speed = Mathf.Sqrt(velocity.value.x * velocity.value.x + velocity.value.y * velocity.value.y);
+			if (maxSpeed.value < speed)
 			{
-				float cappedX = velocity.value.x / groundSpeed * maxSpeed.value;
-				float cappedY = velocity.value.z / groundSpeed * maxSpeed.value;
-				velocity = new Vector3(cappedX, cappedY, velocity.value.z);
+				float maxSpeedX = velocity.value.x / speed * maxSpeed.value;
+				float maxSpeedY = velocity.value.z / speed * maxSpeed.value;
+				velocity = new Vector3(maxSpeedX, maxSpeedY, velocity.value.z);
 			}
 			agent.transform.position += velocity.value * Time.deltaTime;
 
