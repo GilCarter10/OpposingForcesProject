@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class ApproachAT : ActionTask {
-		public BBParameter<Vector3> characterAcceleration;
-		public BBParameter<Transform> target;
-		public float steeringAcceleration;
+	public class FollowAT : ActionTask {
 
+		public BBParameter<Vector3> acceleration;
+		public BBParameter<Transform> target;
+		public float stoppingDistance;
+		public float steeringAcceleration;
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
@@ -20,9 +21,15 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			float distanceToTarget = Vector3.Distance(agent.transform.position, target.value.position);
+			if (distanceToTarget < stoppingDistance)
+			{
+				EndAction(true);
+				return;
+			}
 			Vector3 direction = target.value.position - agent.transform.position;
-			direction = new Vector3(direction.x, 0, direction.z);
-			characterAcceleration.value += direction.normalized * steeringAcceleration * Time.deltaTime;
+			direction = new Vector3(direction.x, 0f, direction.z);
+			acceleration.value += direction.normalized * steeringAcceleration * Time.deltaTime;
 			EndAction(true);
 		}
 

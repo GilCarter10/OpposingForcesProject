@@ -10,7 +10,7 @@ public class DestroyOffscreen : MonoBehaviour
     {
         if (spriteInParent && GetComponentInParent<Rigidbody2D>() != null)
         {
-            Debug.Log(gameObject.name);
+            //Debug.Log(gameObject.name);
             Destroy(GetComponentInParent<Rigidbody2D>().gameObject);
         }
         else Destroy(gameObject);
