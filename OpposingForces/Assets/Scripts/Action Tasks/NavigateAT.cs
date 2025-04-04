@@ -30,7 +30,7 @@ namespace NodeCanvas.Tasks.Actions {
 			if (maxSpeed.value < speed)
 			{
 				float maxSpeedX = velocity.value.x / speed * maxSpeed.value;
-				float maxSpeedY = velocity.value.z / speed * maxSpeed.value;
+				float maxSpeedY = velocity.value.y / speed * maxSpeed.value;
 				velocity = new Vector3(maxSpeedX, maxSpeedY, velocity.value.z);
 			}
 			agent.transform.position += velocity.value * Time.deltaTime;
