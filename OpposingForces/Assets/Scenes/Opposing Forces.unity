@@ -216,7 +216,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1068868227, guid: 25fb7144873fa494dbd8448d83bca781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -382,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 342803854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5499997, y: -1.56, z: 0}
+  m_LocalPosition: {x: 3.72, y: 2.73, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -465,7 +465,7 @@ MonoBehaviour:
   _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":469.0,"y":80.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"0"},{"_condition":{"valueA":{"_name":"MyTurn","_targetVariableID":"103c07fd-e616-49ba-86cd-b4582b0cff05"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_position":{"x":294.7416,"y":181.859},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"1"},{"_position":{"x":467.4305,"y":315.9552},"_comment":"\n","$type":"NodeCanvas.BehaviourTrees.Selector","$id":"2"},{"_action":{"waitTime":{"_value":2.0},"finishStatus":0,"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":191.9216,"y":432.7862},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"startingHealth":{"_name":"startingHealth","_targetVariableID":"8dff7f19-1bde-4ba4-aa60-44a14ec5fd90"},"damageScript":1,"$type":"NodeCanvas.Tasks.Actions.SetStartingHealthAT"},"_position":{"x":294.3121,"y":433.717},"_comment":"Set
     Starting Health at Start of Chase","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"4"},{"dynamic":true,"_position":{"x":466.8745,"y":425.7115},"_comment":"Vampire
     Chasing","$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"5"},{"_action":{"velocity":{"_name":"velocity","_targetVariableID":"c2a91dc7-7b5f-4a3c-9961-e8bdcdac825d"},"acceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"maxSpeed":{"_name":"maxSpeed","_targetVariableID":"b125e8e6-9444-4ecb-bac4-94fdd2acd2d1"},"$type":"NodeCanvas.Tasks.Actions.NavigateAT"},"_position":{"x":393.8237,"y":559.4},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"actions":[{"characterAcceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"player":{"_name":"ship","_targetVariableID":"28d2f67e-c358-4c9f-8e2e-c2be706b2bad"},"steeringAcceleration":4.0,"animator":2,"$type":"NodeCanvas.Tasks.Actions.ChaseAT"},{"damageScript":1,"startingHealth":{"_name":"startingHealth","_targetVariableID":"8dff7f19-1bde-4ba4-aa60-44a14ec5fd90"},"damageTaken":{"_name":"vampireDamageTaken","_targetVariableID":"b3b647d5-4217-4256-aff3-e48323d73897"},"$type":"NodeCanvas.Tasks.Actions.CheckDamageAT"},{"parameter":{"_value":"vampire"},"parameterHashID":{},"setTo":{"_value":true},"_isDisabled":true,"overrideAgent":{"_type":"UnityEngine.Animator","_value":2},"$type":"NodeCanvas.Tasks.Actions.MecanimSetBool"}],"$type":"NodeCanvas.Framework.ActionList"},"_position":{"x":513.4327,"y":559.9839},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"dynamic":true,"_position":{"x":750.9273,"y":436.9591},"_comment":"Vampire
-    Retreating","$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"8"},{"_action":{"velocity":{"_name":"velocity","_targetVariableID":"c2a91dc7-7b5f-4a3c-9961-e8bdcdac825d"},"acceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"maxSpeed":{"_name":"maxSpeed","_targetVariableID":"b125e8e6-9444-4ecb-bac4-94fdd2acd2d1"},"$type":"NodeCanvas.Tasks.Actions.NavigateAT"},"_position":{"x":678.0003,"y":553.7614},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"actions":[{"characterAcceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"defaultPosition":{"_name":"defaultPos","_targetVariableID":"26c6849f-3815-42ae-a30e-c13d9e039195"},"steeringAcceleration":5.0,"animator":2,"$type":"NodeCanvas.Tasks.Actions.RetreatAT"},{"acceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"target":{"_name":"ship","_targetVariableID":"28d2f67e-c358-4c9f-8e2e-c2be706b2bad"},"avoidRange":0.1,"steeringAcceleration":5.0,"$type":"NodeCanvas.Tasks.Actions.AvoidAT"}],"$type":"NodeCanvas.Framework.ActionList"},"_position":{"x":823.1718,"y":553.248},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"},{"_action":{"myTurn":{"_name":"MyTurn","_targetVariableID":"103c07fd-e616-49ba-86cd-b4582b0cff05"},"otherBossBlackboard":3,"otherBossAnimator":4,"$type":"NodeCanvas.Tasks.Actions.ChangeTurnAT"},"_position":{"x":962.3378,"y":443.1523},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"11"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[{"name":"Vampire
+    Retreating","$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"8"},{"_action":{"velocity":{"_name":"velocity","_targetVariableID":"c2a91dc7-7b5f-4a3c-9961-e8bdcdac825d"},"acceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"maxSpeed":{"_name":"maxSpeed","_targetVariableID":"b125e8e6-9444-4ecb-bac4-94fdd2acd2d1"},"$type":"NodeCanvas.Tasks.Actions.NavigateAT"},"_position":{"x":678.0003,"y":553.7614},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"actions":[{"characterAcceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"defaultPosition":{"_name":"defaultPos","_targetVariableID":"26c6849f-3815-42ae-a30e-c13d9e039195"},"steeringAcceleration":5.0,"animator":2,"$type":"NodeCanvas.Tasks.Actions.RetreatAT"},{"acceleration":{"_name":"acceleration","_targetVariableID":"baf160b8-3362-4e84-b33a-cccc8fc27631"},"target":{"_name":"ship","_targetVariableID":"28d2f67e-c358-4c9f-8e2e-c2be706b2bad"},"avoidRange":0.1,"steeringAcceleration":5.0,"_isDisabled":true,"$type":"NodeCanvas.Tasks.Actions.AvoidAT"}],"$type":"NodeCanvas.Framework.ActionList"},"_position":{"x":823.1718,"y":553.248},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"},{"_action":{"myTurn":{"_name":"MyTurn","_targetVariableID":"103c07fd-e616-49ba-86cd-b4582b0cff05"},"otherBossBlackboard":3,"otherBossAnimator":4,"$type":"NodeCanvas.Tasks.Actions.ChangeTurnAT"},"_position":{"x":962.3378,"y":443.1523},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"11"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[{"name":"Vampire
     Attack","rect":{"xMin":161.9216,"yMin":250.9552,"xMax":1104.338,"yMax":693.984},"autoGroup":true}],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
@@ -477,8 +477,8 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -143, y: -59}
-    _zoomFactor: 0.72718054
+    _translation: {x: -36.56092, y: -200.72214}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -581,7 +581,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f0453e573643bbf46bda14ab554a63bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -663,7 +663,7 @@ Transform:
   m_GameObject: {fileID: 716278529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.55, y: -1.56, z: 0}
+  m_LocalPosition: {x: 3.7200003, y: 2.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -696,8 +696,8 @@ Transform:
   m_GameObject: {fileID: 815211688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.396, y: 0.2739997, z: 0.051418804}
-  m_LocalScale: {x: 16.889675, y: 0.7158648, z: 1.4313545}
+  m_LocalPosition: {x: -11.98, y: 0.398, z: 0.051418804}
+  m_LocalScale: {x: 19.971027, y: 1.318623, z: 1.4313545}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 232968120}
@@ -1210,8 +1210,8 @@ Transform:
   m_GameObject: {fileID: 1456289697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.316, y: -0.02, z: 0.051418804}
-  m_LocalScale: {x: 21.085737, y: 0.7158648, z: 1.4313545}
+  m_LocalPosition: {x: -9.881, y: -0.144, z: 0.051418804}
+  m_LocalScale: {x: 24.206427, y: 1.318623, z: 1.4313545}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 232968120}
@@ -1842,7 +1842,6 @@ GameObject:
   - component: {fileID: 2130324597}
   - component: {fileID: 2130324596}
   - component: {fileID: 2130324594}
-  - component: {fileID: 2130324595}
   m_Layer: 7
   m_Name: Gil
   m_TagString: Enemy
@@ -1929,7 +1928,7 @@ Transform:
   m_GameObject: {fileID: 2130324591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.25, y: 2.86, z: 0}
+  m_LocalPosition: {x: 3.25, y: -1.13, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1955,18 +1954,6 @@ MonoBehaviour:
   takingDamageTimer: 0
   setPoints: 0
   FloatingTextPrefab: {fileID: 0}
---- !u!114 &2130324595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130324591}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ad3ad4908063d248ac65035539c910a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2130324596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,7 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":841.1604,"y":114.4186},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"0"},{"_condition":{"valueA":{"_name":"MyTurn","_targetVariableID":"f3f10a9f-457d-4b01-8faf-c796444ac835"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_position":{"x":635.0249,"y":206.0126},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"1"},{"_position":{"x":1196.586,"y":264.078},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":813.627,"y":414.035},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"animator":1,"triggerName":"Visor","$type":"NodeCanvas.Tasks.Actions.SetAnimatorTriggerAT"},"_position":{"x":910.3247,"y":413.8412},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"4"},{"_action":{"waitTime":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":1080.023,"y":412.961},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"5"},{"_action":{"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.SetObjectActive"},"_position":{"x":1172.565,"y":414.6134},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"waitTime":{"_value":4.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":1294.165,"y":411.4712},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"_action":{"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.SetObjectActive"},"_position":{"x":1392.247,"y":413.3174},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"},{"_action":{"myTurn":{"_name":"MyTurn","_targetVariableID":"f3f10a9f-457d-4b01-8faf-c796444ac835"},"otherBossBlackboard":3,"otherBossAnimator":4,"$type":"NodeCanvas.Tasks.Actions.ChangeTurnAT"},"_position":{"x":1509.016,"y":413.0031},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[{"name":"Beam
+  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":841.1604,"y":114.4186},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"0"},{"_condition":{"valueA":{"_name":"MyTurn","_targetVariableID":"f3f10a9f-457d-4b01-8faf-c796444ac835"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_position":{"x":635.0249,"y":206.0126},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"1"},{"_position":{"x":1196.586,"y":264.078},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":813.627,"y":414.035},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"animator":1,"triggerName":"Visor","$type":"NodeCanvas.Tasks.Actions.SetAnimatorTriggerAT"},"_position":{"x":910.3247,"y":413.8412},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"4"},{"_action":{"waitTime":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":1080.023,"y":412.961},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"5"},{"_action":{"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.SetObjectActive"},"_position":{"x":1172.565,"y":414.6134},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"waitTime":{"_value":4.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":1294.165,"y":411.4712},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"_action":{"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.SetObjectActive"},"_position":{"x":1392.247,"y":413.3174},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"},{"_action":{"myTurn":{"_name":"MyTurn","_targetVariableID":"f3f10a9f-457d-4b01-8faf-c796444ac835"},"otherBossBlackboard":3,"otherBossAnimator":4,"$type":"NodeCanvas.Tasks.Actions.ChangeTurnAT"},"_position":{"x":1509.016,"y":413.0031},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":339.0,"y":607.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode"},{"repeatTimes":{"_value":1},"_position":{"x":473.5113,"y":610.3741},"$type":"NodeCanvas.BehaviourTrees.Repeater"},{"_position":{"x":599.0,"y":581.0},"$type":"NodeCanvas.BehaviourTrees.ConditionalEvaluator"},{"_position":{"x":592.0,"y":722.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode"},{"_position":{"x":751.0,"y":574.0},"$type":"NodeCanvas.BehaviourTrees.Parallel"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[{"name":"Beam
     Attack","rect":{"xMin":783.627,"yMin":199.078,"xMax":1653.016,"yMax":503.6134},"autoGroup":true}],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
@@ -2016,8 +2003,8 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -497, y: 28}
-    _zoomFactor: 0.754486
+    _translation: {x: -154, y: -257}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0

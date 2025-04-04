@@ -10,9 +10,12 @@ namespace NodeCanvas.Tasks.Actions {
 		public Blackboard otherBossBlackboard;
 		public Animator otherBossAnimator;
 
+		private SpriteRenderer sprite;
+
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit() {
+			sprite = agent.GetComponentInChildren<SpriteRenderer>();
 			return null;
 		}
 
@@ -23,6 +26,7 @@ namespace NodeCanvas.Tasks.Actions {
 			myTurn.value = false;
 			otherBossAnimator.SetTrigger("ChangeTurn");
 			otherBossBlackboard.SetVariableValue("MyTurn", true);
+			sprite.sortingOrder = 1;
 			EndAction(true);
 		}
 

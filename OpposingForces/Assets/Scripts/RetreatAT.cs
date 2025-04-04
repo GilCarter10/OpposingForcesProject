@@ -26,9 +26,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 			//retreat movement
 			Vector3 direction = defaultPosition.value - agent.transform.position;
-			direction = new Vector3(direction.x, direction.y, 0);
 			characterAcceleration.value += direction.normalized * steeringAcceleration * Time.deltaTime;
-			if (direction.magnitude < 0.5)
+			if (direction.magnitude < 0.9)
 			{
 				//arrived
 				animator.SetBool("vampire", false);
