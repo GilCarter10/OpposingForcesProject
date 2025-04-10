@@ -6,46 +6,24 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class NavigateAT : ActionTask {
 
-		public BBParameter<Vector3> velocity;
-		public BBParameter<Vector3> acceleration;
-		public BBParameter<float> maxSpeed;
+        //public BBParameter<Vector3> velocity;
+        //public BBParameter<Vector3> acceleration;
+        //public BBParameter<float> maxSpeed;
+        public BBParameter<VampireData> vampireData;
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
-			return null;
-		}
-
-		//This is called once each time the task is enabled.
-		//Call EndAction() to mark the action as finished, either in success or failure.
-		//EndAction can be called from anywhere.
-		protected override void OnExecute() {
-			
-		}
-
-		//Called once per frame while the action is active.
-		protected override void OnUpdate() {
-			velocity.value += acceleration.value;
-			float speed = Mathf.Sqrt(velocity.value.x * velocity.value.x + velocity.value.y * velocity.value.y);
-			if (maxSpeed.value < speed)
+        protected override void OnUpdate() {
+            vampireData.value.velocity += vampireData.value.acceleration;
+			float speed = Mathf.Sqrt(vampireData.value.velocity.x * vampireData.value.velocity.x + vampireData.value.velocity.y * vampireData.value.velocity.y);
+			if (vampireData.value.maxSpeed < speed)
 			{
-				float maxSpeedX = velocity.value.x / speed * maxSpeed.value;
-				float maxSpeedY = velocity.value.y / speed * maxSpeed.value;
-				velocity = new Vector3(maxSpeedX, maxSpeedY, velocity.value.z);
+				float maxSpeedX = vampireData.value.velocity.x / speed * vampireData.value.maxSpeed;
+				float maxSpeedY = vampireData.value.velocity.y / speed * vampireData.value.maxSpeed;
+                vampireData.value.velocity = new Vector3(maxSpeedX, maxSpeedY, vampireData.value.velocity.z);
 			}
-			agent.transform.position += velocity.value * Time.deltaTime;
+			agent.transform.position += vampireData.value.velocity * Time.deltaTime;
 
-			acceleration.value = Vector3.zero;
+            vampireData.value.acceleration = Vector3.zero;
 		}
 
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
-
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
 	}
 }

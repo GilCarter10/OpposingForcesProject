@@ -53,6 +53,7 @@ public class PlayerMoveAndShoot : MonoBehaviour
     public static float maxSpeedDashStatic;
     public static float maxSpeedKnockbackStatic;
 
+
     void Start()
     {
         playerTransform = transform;
@@ -121,6 +122,8 @@ public class PlayerMoveAndShoot : MonoBehaviour
             //begins timer to end dash
             dashTimer += Time.deltaTime;
 
+            PlayerDamageAndParry.isInvincible = true;
+
             //if dash timer exceeds the dash duration
             if (dashTimer >= dashDuration)
             {
@@ -135,6 +138,8 @@ public class PlayerMoveAndShoot : MonoBehaviour
         else 
         {
             dashTimer = 0; //resets timer to zero when not dashing
+            
+            PlayerDamageAndParry.isInvincible = false;
 
             //turns trail renderer off
             trailRenderer.time = Mathf.Clamp(trailRenderer.time - Time.deltaTime, 0f, .2f);

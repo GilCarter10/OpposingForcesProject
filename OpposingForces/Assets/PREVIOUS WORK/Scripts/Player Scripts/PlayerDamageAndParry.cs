@@ -27,7 +27,7 @@ public class PlayerDamageAndParry : MonoBehaviour
     public static bool inKnockback = false;
 
     public float invincibleTime; 
-    bool isInvincible = false;
+    public static bool isInvincible = false;
 
     public GameObject gameOverScreen;
 
