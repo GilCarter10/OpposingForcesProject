@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  homing: 0
+  homingTime: 1.5
 --- !u!114 &1623051800402334866
 MonoBehaviour:
   m_ObjectHideFlags: 0

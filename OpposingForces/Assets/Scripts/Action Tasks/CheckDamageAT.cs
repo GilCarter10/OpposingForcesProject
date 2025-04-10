@@ -9,10 +9,11 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public TakeDamage damageScript;
         public BBParameter<VampireData> vampireData;
+		public float damageThreshold;
 
         protected override void OnUpdate() {
             vampireData.value.vampireDamageTaken = vampireData.value.startingHealth - damageScript.health;
-            if (vampireData.value.vampireDamageTaken > 30)
+            if (vampireData.value.vampireDamageTaken > damageThreshold)
 			{
 				EndAction(false);
 			}

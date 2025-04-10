@@ -8,14 +8,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public GameObject projectilePrefab;
 
-		protected override string OnInit() {
-			return null;
-		}
-
 		protected override void OnExecute() {
-			
-			MonoBehaviour.Instantiate(projectilePrefab, agent.transform.position, agent.transform.rotation);
-			EndAction(true);
+
+            MonoBehaviour.Instantiate(projectilePrefab, agent.transform.position, agent.transform.rotation);
+            EndAction(true);
 		}
 
 	}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7534366109520303602
+--- !u!1 &6620154755677714622
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7031212642742643932}
-  - component: {fileID: 6153387196019423958}
-  - component: {fileID: 2834151179936810417}
-  - component: {fileID: 5126281899843560496}
-  - component: {fileID: 5092964322805315903}
-  - component: {fileID: 9139183243018680950}
-  - component: {fileID: 2654729782270517804}
-  m_Layer: 7
-  m_Name: Yap Projectile
-  m_TagString: Enemy
+  - component: {fileID: 3147381182827892434}
+  - component: {fileID: 4094260773290094167}
+  m_Layer: 0
+  m_Name: yap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7031212642742643932
+--- !u!4 &3147381182827892434
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534366109520303602}
+  m_GameObject: {fileID: 6620154755677714622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81384015, y: 2.6581779, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 7031212642742643932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6153387196019423958
+--- !u!212 &4094260773290094167
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534366109520303602}
+  m_GameObject: {fileID: 6620154755677714622}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 125f97aabde98e7419bbd1d8212c77b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -89,6 +84,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7534366109520303602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7031212642742643932}
+  - component: {fileID: 2834151179936810417}
+  - component: {fileID: 5126281899843560496}
+  - component: {fileID: 5092964322805315903}
+  - component: {fileID: 9139183243018680950}
+  - component: {fileID: 2654729782270517804}
+  m_Layer: 7
+  m_Name: Yap Projectile
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7031212642742643932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534366109520303602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5698, y: 2.6581779, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 3147381182827892434}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2834151179936810417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bf8502f2d66344e8068da9cc866961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2.5
+  homing: 1
+  homingTime: 2.5
 --- !u!114 &5126281899843560496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7534366109520303602}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c93e52dfe5254894280ec3f9a9c36c41, type: 3}
   m_Name: 
