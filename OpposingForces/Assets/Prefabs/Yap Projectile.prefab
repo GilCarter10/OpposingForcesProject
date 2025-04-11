@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7031212642742643932}
   - component: {fileID: 2834151179936810417}
-  - component: {fileID: 5126281899843560496}
   - component: {fileID: 5092964322805315903}
   - component: {fileID: 9139183243018680950}
   - component: {fileID: 2654729782270517804}
@@ -136,19 +135,6 @@ MonoBehaviour:
   speed: 2.5
   homing: 1
   homingTime: 2.5
---- !u!114 &5126281899843560496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534366109520303602}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93e52dfe5254894280ec3f9a9c36c41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
 --- !u!114 &5092964322805315903
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ public class TakeDamage : MonoBehaviour
     public GameObject FloatingTextPrefab; 
 
     SpriteRenderer enemySprite;
+    public SpriteRenderer additonalSprite1;
+    public SpriteRenderer additonalSprite2;
     bool isFlashing;
 
     Color normalColor;
@@ -40,7 +42,6 @@ public class TakeDamage : MonoBehaviour
         {
             if (gameObject.tag != "Special Action")
             {
-                ShowPoints();
                 Destroy(gameObject);
             }
         }
@@ -73,26 +74,23 @@ public class TakeDamage : MonoBehaviour
     {
         isFlashing = true;
         enemySprite.color = flashColor;
+        if (additonalSprite1 != null & additonalSprite2 != null)
+        {
+            additonalSprite1.color = flashColor;
+            additonalSprite2.color = flashColor;
+        }
         yield 
         return new WaitForSeconds(flashingTime);
         enemySprite.color = normalColor;
+        if (additonalSprite1 != null & additonalSprite2 != null)
+        {
+            additonalSprite1.color = normalColor;
+            additonalSprite2.color = normalColor;
+        }
         yield
         return new WaitForSeconds(flashingTime);
         isFlashing = false;
     }
 
-    void ShowPoints()
-    {
-        if (gameObject.tag == "Enemy")
-        {
-            pointType = "EP";
-        } else if (gameObject.tag == "Destructable")
-        {
-            pointType = "SP";
-        }
-        TextMesh floatingText = FloatingTextPrefab.GetComponent<TextMesh>();
-        floatingText.text = $"{setPoints}{pointType}";
 
-        Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity);
-    }
 }
