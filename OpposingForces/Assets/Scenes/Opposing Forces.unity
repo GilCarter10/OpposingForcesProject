@@ -511,8 +511,8 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -333, y: 529}
-    _zoomFactor: 0.97608596
+    _translation: {x: 100, y: 224}
+    _zoomFactor: 0.34200078
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -2637,8 +2637,8 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -216.83519, y: 543.9719}
-    _zoomFactor: 1
+    _translation: {x: -301.99353, y: 45.927235}
+    _zoomFactor: 0.70980537
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
